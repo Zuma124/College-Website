@@ -1,0 +1,23 @@
+.inDevelopment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inDevelopmentGif {
+    object-fit: cover;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 2rem;
+    margin-top: 50%;
+}
+
+.inDevelopment h3 {
+    margin-top: 2rem;
+}
+
+@media screen and (max-width: 750px) {
+    .inDevelopmentGif {
+        margin-top: 70%;
+    }
+}

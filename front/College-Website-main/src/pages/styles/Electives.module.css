@@ -1,0 +1,64 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.header h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    font-family: "Montserrat", sans-serif;
+    padding-top: 41px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.counter {
+    display: flex;
+    justify-content: center;
+    height: 2rem;
+    padding: 1.4rem;
+    padding-top: 1.6vw;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.9rem;
+    color: rgb(163, 163, 163);
+}
+
+.cards {
+    width: 90%;
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+  
+.saveButton {
+    margin-top: 2rem;
+    width: 17.5rem;
+    height: 2.3rem;
+    padding: 10px 0;
+    background-color: var(--save-button);
+    color: var(--bg-primary);
+    border: none;
+    border-radius: 0.8rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.saveButton i {
+    font-size: 1.3rem;
+    font-variation-settings: var(--setting-icon-size);
+}
+  

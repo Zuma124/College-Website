@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: none;
+  outline: none;
+}
+
+:root {
+  --login-heading: rgb(75, 75, 75);
+  --input-label: rgb(115, 115, 115); 
+  --input-border: rgb(225, 225, 225);
+  --input-border-focus: rgb(200, 200, 200);
+  --login-btn-bg: rgb(220, 220, 220);
+  --login-btn-text: rgb(255, 255, 255);
+  --active-login-btn-bg: rgb(0, 0, 0);
+  --active-login-btn-text: rgb(255, 255, 255);
+  --onclick-login-btn-bg: rgb(40, 40, 40);
+
+  --text-color: rgb(0, 0, 0);
+  --name-surname-color: rgb(0, 0, 0);
+
+  --bg-primary: rgb(255, 255, 255);
+  --bg-secondary: rgb(255, 255, 255);
+
+  --btn-color: rgb(0, 0, 0);
+  --btn-font-color: rgb(255, 255, 255);
+
+  --blue-primary: rgb(109, 165, 255);
+  --blue-secondary: rgba(109, 165, 255, 0.25);
+  
+  --green-primary: rgb(90, 228, 177);
+  --green-secondary: rgba(109, 255, 116, 0.25);
+
+  --sidebar-toggle-default: rgb(220, 220, 220);
+  --sidebar-toggle-hover: rgb(193, 193, 193);
+
+  --theme-toggle-primary: rgb(0, 0, 0);
+  --theme-toggle-secondary: rgba(218, 232, 255);
+
+  --navitem-hover: rgb(80, 80, 80);
+
+  --gray-1: rgb(220, 220, 220);
+  --gray-2: rgb(200, 200, 200);
+  --gray-3: rgb(240, 240, 240);
+  --gray-4: rgb(240, 240, 240);
+  --gray-5: rgba(163, 163, 163, 1);
+
+  --setting-icon-size: 'wght' 200;
+
+  --schedule-line: rgb(240, 240, 240);
+  --schedule-time: rgb(196, 196, 196);
+
+  --save-button: rgb(10, 10, 10);
+
+  --dropdown-shadow: rgba(175, 175, 175, 0.250);
+
+  font-family: "Raleway", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[data-theme="dark"] {
+  --login-heading: rgb(255, 255, 255);
+  --input-label: rgb(201, 201, 201);
+  --input-border: rgb(47, 47, 47);
+  --input-border-focus: rgb(35, 35, 35);
+  --login-btn-bg: rgb(20, 20, 20);
+  --login-btn-text: rgb(75, 75, 75);
+  --active-login-btn-bg: rgb(255, 255, 255);
+  --active-login-btn-text: rgb(0, 0, 0);
+  --onclick-login-btn-bg: rgb(220, 220, 220);
+
+  --text-color: rgb(255, 255, 255);
+  --name-surname-color: rgb(255, 255, 255);
+
+  --bg-primary: rgb(23, 23, 23);
+  --bg-secondary: rgb(25, 25, 25);
+
+  --btn-color: rgb(255, 255, 255);
+  --btn-font-color: rgb(0, 0, 0);
+
+  --blue-primary: rgb(99, 158, 255);
+  --blue-secondary: rgba(109, 165, 255, 0.25);
+  
+  --green-primary: rgb(90, 228, 177);
+  --green-secondary: rgba(78, 181, 121, 0.25);
+
+  --sidebar-toggle-default: rgb(65, 65, 65);
+  --sidebar-toggle-hover: rgb(83, 83, 83);
+
+  --theme-toggle-primary: rgb(0, 0, 0);
+  --theme-toggle-secondary: rgba(255, 255, 255);
+
+  --navitem-hover: rgb(211, 211, 211);
+
+  --gray-1: rgb(65, 65, 65);
+  --gray-2: rgb(45, 45, 45);
+  --gray-3: rgb(20, 20, 20);
+  --gray-4: rgb(15, 15, 15);
+  --gray-5: rgba(163, 163, 163, 0.3);
+
+  --setting-icon-size: 'wght' 300;
+
+  --schedule-line: rgb(60, 60, 60);
+  --schedule-time: rgb(110, 110, 110);
+
+  --save-button: rgb(255, 255, 255);
+
+  --dropdown-shadow: rgb(20, 20, 20, 0.500);
+}
+ 
+main {
+  display: flex;
+  justify-content: center;
+  width: calc(100% - 270px);
+  height: 100vh;
+  margin-left: 270px;
+  margin-top: auto;
+  background-color: var(--bg-primary);
+  color: var(--text-color);
+  transition: all 0.25s ease-in-out;
+}
+
+main.wider{
+  width: calc(100% - 70px);
+  margin-left: 70px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  background-color: var(--bg-primary);
+  width: calc(100% - 270px);
+  margin-top: 8%;
+  padding-bottom: 5%;
+  border-radius: 2.5rem 2.5rem 0 0;
+  transition: all 0.25s ease-in-out;
+}
+
+.container.wider {
+  width: calc(100% - 70px);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 12rem;
+  transition: all 0.25s ease-in-out;
+}
+
+header.wider {
+  height: 13rem;
+}
+
+header img:nth-child(1) {
+  width: 100%;
+  height: 100%;
+  transition: all 0.25s ease-in-out;
+}
+
+header img:nth-child(2) {
+  position: absolute;
+  width: 13%;
+  margin-top: 1.6%;
+  transition: all 0.25s ease-in-out;
+}
+
+@media screen and (max-width: 1300px) {
+  header.wider {
+    height: 10rem;
+  }
+  header img:nth-child(2) {
+    position: absolute;
+    width: 14%;
+    margin-top: 1.3%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  header.wider {
+    height: 7.5rem;
+  }
+  header img:nth-child(2) {
+    position: absolute;
+    width: 16%;
+    margin-top: 1.2%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  header.wider {
+    height: 7rem;
+    margin-top: 2.5rem;
+  }
+  header img:nth-child(2) {
+    position: absolute;
+    width: 20%;
+    margin-top: 2.5%;
+  }
+  main.wider{
+    width: calc(100%);
+    margin-left: 0px;
+  }
+  .container.wider {
+    width: calc(100%);
+    margin-top: 12%;
+    border-radius: 1.5rem 1.5rem 0 0;
+    margin-top: calc(12% + 2.5rem);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header.wider {
+    height: 6rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header.wider {
+    height: 7.5rem;
+  }
+  header img:nth-child(2) {
+    position: absolute;
+    width: 13%;
+    margin-top: 4%;
+  }
+  .container.wider {
+    margin-top: calc(20% + 2.5rem);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  header.wider {
+    height: 7rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header.wider {
+    height: 6.5rem;
+  }
+}
+
+
+

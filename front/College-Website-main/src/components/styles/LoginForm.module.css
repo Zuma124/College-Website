@@ -1,0 +1,69 @@
+.loginForm {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+}
+
+.logo {
+    width: 100px;
+    height: 95px;
+}
+
+.headingText {
+    color: var(--login-heading);
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+.inputLabel {
+    margin-right: auto;
+    margin-bottom: 0.2rem;
+    font-weight: 500;
+    font-size: 0.8rem;
+    color: var(--input-label);
+}
+
+.input {
+    width: 275px;
+    height: 40px;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--input-border);
+    border-radius: 0.7rem;
+    color: var(--input-label);
+    font-size: 0.8rem;
+    padding-left: 5%;
+    outline: none;
+    transition: 0.4s;
+}
+
+.input:focus {
+    border-color: var(--input-border-focus);
+}
+
+.loginBtn {
+    width: 275px;
+    height: 40px;
+    background-color: var(--login-btn-bg);
+    border: none;
+    border-radius: 0.7rem;
+    color: var(--login-btn-text);
+    font-size: 0.8rem;
+    padding-left: 5%;
+    outline: none;
+    transition: 0.4s;
+    cursor: not-allowed;
+}
+
+.loginBtn.active {
+    background-color: var(--active-login-btn-bg);
+    color: var(--active-login-btn-text);
+    cursor: pointer;
+}
+
+.loginBtn.active:active {
+    background-color: var(--onclick-login-btn-bg);
+}
+
+

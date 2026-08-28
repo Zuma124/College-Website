@@ -1,0 +1,69 @@
+.card {
+  width: 16rem;
+  height: 20rem;
+  padding: 1.7rem;
+  border: 1px solid var(--bg-secondary);
+  border-radius: 15px;
+  border-color: var(--gray-3);
+  background-color: var(--bg-secondary);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease-in-out;
+  gap: 0.7rem;
+}
+
+.card.selected {
+  border-color: var(--blue-primary);
+}
+
+.subjectName {
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.subjectDescription {
+  font-size: 0.9rem;
+  flex-grow: 1;
+  overflow: hidden;
+  color: var(--gray-5);
+  font-family: "Releway", sans-serif;
+}
+
+.subjectTeacher {
+  font-size: 0.9rem;
+  display: flex;
+  font-family: "Releway", sans-serif;
+  flex-direction: column;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;  
+  color: var(--gray-5);
+}
+
+.selectButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 2rem;
+  padding: 10px 0;
+  margin-top: 0.5rem;
+  border: 0.1rem solid var(--blue-secondary);
+  border-radius: 0.9rem;
+  background-color: transparent;
+  color: var(--blue-secondary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Montserrat", sans-serif;
+}
+
+.selectButton.cancel {
+  background-color: var(--blue-primary);
+  color: #ffffff;
+  border: 2px solid var(--blue-primary);
+}
+
+

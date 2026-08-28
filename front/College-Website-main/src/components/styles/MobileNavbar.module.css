@@ -1,0 +1,51 @@
+.mobileNavbar {
+    position: absolute;
+    z-index: 100;
+    background-color: var(--bg-primary);
+    width: 100vw;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobileNavbar button {
+    position: absolute;
+    margin-right: 90%;
+    border: none;
+    background: none;
+    color: var(--font-color);
+    padding-top: 0.2rem;
+}
+
+.dropdown {
+    overflow: hidden;
+    opacity: 0;
+    font-size: 0;
+    background-color: var(--bg-secondary);
+    padding: 15px;
+    border-radius: 0.7rem;
+    margin-top: 16rem;
+    margin-right: auto;
+    transform: translateX(-20rem);
+    transform: translateY(-20rem);
+    box-shadow: 0px 2px 16px 0px var(--dropdown-shadow);
+    transition: all 0.25s ease-in-out;
+}
+
+.dropdown.active {
+    overflow: visible;
+    opacity: 1;
+    font-size: 1rem;
+    font-weight: 500;
+    transform: translateY(0);
+    transform: translateX(0.3rem);
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    cursor: default;
+    padding: 10px 0;
+}

@@ -1,0 +1,43 @@
+.subjInfo {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg-secondary);
+    width: 250px;
+    margin-left: 35px;
+    margin-top: 30px;
+    border-radius: 1rem;
+    border: 2px solid var(--gray-3);
+    transition: all 0.25s ease-in-out;
+}
+ 
+.subjInfo h1 {
+    font-weight: 600;
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+ 
+.subjInfo span {
+    font-weight: 600;
+}
+ 
+.subjInfo p {
+    width: 80%;
+    font-size: 0.8rem;
+    margin-bottom: 10%;
+}
+
+@media screen and (max-width: 1300px) {
+    .subjInfo {
+        width: 200px;
+    }
+}
+ 
+ @media screen and (max-width: 950px) {
+    .subjInfo {
+        width: 200px;
+    }
+}
+ 

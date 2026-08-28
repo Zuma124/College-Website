@@ -1,0 +1,356 @@
+.sidebar {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 270px;
+    height: 100vh;
+    border-right: 2px solid var(--gray-3);
+    font-weight: 500;
+    background-color: var(--bg-secondary);
+    color: var(--text-color);
+    transition: all 0.25s ease-in-out;
+    z-index: 100; 
+}
+
+.sidebar.close {
+    width: 70px;
+    transition: all 0.25s ease-in-out;
+}
+
+.sidebar.close p {
+    visibility: hidden;
+    transition: all 0.25s ease-in-out;
+}
+
+.line {
+    background-color: var(--gray-2);
+    height: 2px;
+    width: 80%;
+    margin-top: 8px;
+    border-radius: 1px;
+    transition: all 0.25s ease-in-out;
+}
+
+.sidebar.close .line {
+    width: 70%;
+    transition: all 0.25s ease-in-out;
+}
+
+/* ===== Accaunt Info ===== */
+
+.header {
+    align-items: center;
+    width: 80%;
+    margin-top: 10px;
+    transition: all 0.25s ease-in-out;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    transition: all 0.25s ease-in-out;
+}
+
+.profileCircle {
+    width: 50px;
+    height: 50px;
+    background-color: var(--gray-4);
+    border-radius: 50%;
+    transition: all 0.25s ease-in-out;
+}
+
+.nameSurname {
+    color: var(--name-surname-color);
+    font-size: 0.9rem;
+    line-height: 1rem;
+    font-weight: 500;
+    margin-left: 14px;
+    width: 130px;
+    line-height: 20px;
+    transition: all 0.25s ease-in-out;
+}
+
+.sidebarToggle {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+
+.sidebarToggle i {
+    font-size: 1.2rem;
+    color: var(--sidebar-toggle-default);
+    font-variation-settings: 'wght' 800;
+    transition: all 0.25s ease-in-out;
+}
+
+.sidebarToggle i:hover {
+    color: var(--sidebar-toggle-hover);
+}
+
+.settingsLink {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    justify-content: center;
+    cursor: default;
+    width: 70%;
+    height: 30px;
+}
+
+.settings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: var(--btn-color);
+    color: var(--btn-font-color);
+    width: 100%;
+    height: 100%;
+    border-radius: 0.8rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    border: none;
+    transition: all 0.25s ease-in-out;
+}
+
+.settings:hover { border-radius: 9px; }
+
+.toggleWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 30px;
+    margin-left: auto;
+    transition: all 0.25s ease-in-out;
+}
+
+.themeToggle { visibility: hidden; }
+
+.themeToggle + label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    transition: all 0.25s ease-in-out;
+}
+
+.themeToggle + label::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    background-color: var(--theme-toggle-secondary);
+    z-index: 0;
+    transition: all 0.25s ease-in-out;
+}
+
+.themeToggle + label::after {
+    content: "";
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 25px;
+    background-color: var(--theme-toggle-primary);
+    position: absolute;
+    margin-right: 1.4rem;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.25s ease-in-out;
+}
+
+label i {
+    position: absolute;
+    z-index: 100;
+    color: var(--theme-toggle-secondary);
+    margin-right: 1.4rem;
+    font-size: 1rem !important;
+    font-variation-settings: 'wght' 400;
+    transition: all 0.25s ease-in-out;
+}
+
+.themeToggle:checked + label::after {
+    transform: translateX(95%);
+    transition: all 0.25s ease-in-out;
+}
+
+.themeToggle:checked + label i {
+    transform: translateX(145%);
+    transition: all 0.25s ease-in-out;
+}
+
+/* ===== Navigation ===== */
+
+.navList {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    width: 72%;
+    height: 100%;
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    justify-content: center;
+    cursor: default;
+    transition: all 0.01s ease-in-out;
+}
+
+.navItem {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    column-gap: 15px;
+    font-size: 0.8rem;
+    margin-top: 30px;
+}
+
+.navItem:last-child { 
+    margin-top: auto; 
+    margin-bottom: 35px;
+}
+
+.navItem i { 
+    font-size: 1.4rem; 
+    font-variation-settings: 'wght' 300;
+    cursor: pointer;
+}
+
+.navItem p { cursor: pointer; }
+
+.navItem:has(p:active), .navItem:has(i:active) { color: var(--navitem-hover); }
+
+/* ===== Accaunt Info | Closed SideBar ===== */
+
+.sidebar.close .header {
+    margin-top: 20px;
+    transition: all 0.25s ease-in-out;
+}
+
+.sidebar.close .section {
+    flex-wrap: wrap;
+    justify-content: center;
+    transition: all 0.25s ease-in-out;
+}
+
+.sidebar.close .sidebarToggle {
+    margin-top: -82px;;
+    margin-left: 15%;
+    align-items: center;
+    position: absolute;
+}
+
+.sidebar.close .sidebarToggle i {
+    margin-left: -10px;
+    font-size: 1.2rem;
+    transform: scale(-1);
+    transition: all 0.25s ease-in-out;
+}
+
+.sidebar.close .profileCircle {
+    margin-bottom: -23px;
+    transition: all 0.25s ease-in-out;
+}
+
+.sidebar.close .nameSurname {
+    font-size: 0;
+    overflow: hidden;
+    transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out;
+}
+
+.sidebar.close .settingsLink {
+    width: 80%;
+    height: 40px;
+    transition: all 0.25s ease-in-out;
+}
+
+.sidebar.close .settings {
+    font-size: 0;
+    margin-left: 0;
+    transition: all 0.25s ease-in-out;
+}
+
+.sidebar.close .settings span {
+    opacity: 0;
+    z-index: -1;
+}
+
+.sidebar.close .settings i {
+    font-size: 1.8rem;
+    font-variation-settings: var(--setting-icon-size);
+    transition: all 0.25s ease-in-out;
+}
+
+.sidebar.close .toggleWrapper {
+    margin-top: 15px;
+    margin-left: -12px;
+    margin-bottom: -10px;
+    width: 100%;
+    transition: all 0.25s ease-in-out;
+}
+
+.sidebar.close .themeToggle + label {
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+
+.sidebar.close .themeToggle + label::after {
+    margin-right: 0.8rem;
+    transition: all 0.25s ease-in-out;
+}
+
+.sidebar.close label i {
+    margin-right: 0.8rem;
+    transition: all 0.25s ease-in-out;
+}
+
+.sidebar.close .themeToggle:checked + label::after {
+    transform: translateX(55%);
+    transition: all 0.25s ease-in-out;
+}
+
+.sidebar.close .themeToggle:checked + label i {
+    transform: translateX(87%);
+    transition: all 0.25s ease-in-out;
+}
+
+/* ===== Navigation | Closed SideBar ===== */
+
+.sidebar.close .navItem p {
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out;
+}
+
+.sidebar.close .link:has(p) {
+    font-size: 0;
+    overflow: hidden;
+    transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out;
+}
+
+.sidebar.close .navItem { margin-left: 25%; }
+
+/* ===== Close Sidebar on Tablet ===== */
+
+@media screen and (max-width: 1300px) {
+    .header  {
+        margin-top: 0;
+    }
+    .section {
+        margin-top: 0;
+    }
+    .sidebarToggle {
+        visibility: hidden;
+    }
+}

@@ -1,0 +1,119 @@
+.schedule {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    height: 850px;
+    margin: 40px 0;
+    margin-right: 35px;
+    padding-top: 20px;
+    transition: all 0.20s ease-in-out;
+}
+  
+.navigation {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 5%;
+    gap: 9%;
+    z-index: 1;
+}
+ 
+.days {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600; 
+    text-align: center;
+    color: var(--btn-color);
+    width: 70px;
+    height: 25px;
+    cursor: pointer;
+    transition: all 0.20s ease-in-out;
+}
+ 
+.selectedDay {
+    color: var(--btn-font-color) !important;
+    cursor: default !important;
+}
+ 
+.selectedWrapper {
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    border-radius: 1rem;
+    background-color: var(--btn-color);
+    margin-top: -6px;
+    z-index: -1;
+    transition: all 0.20s ease-in-out;
+}
+ 
+.navUnderLine {
+    background-color: var(--schedule-line);
+    width: 100%;
+    height: 1px;
+    margin-bottom: 30px;
+}
+ 
+.subjectsList {
+    display: flex;
+    flex-direction: column;
+    margin-top: -20px;
+}
+ 
+.time,.firstTime {
+    color: var(--schedule-time);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    margin-top: -10px;
+    margin-left: 12px;
+}
+ 
+.firstTime { 
+    position: absolute;
+    margin-top: -5px; 
+}
+ 
+.line {
+    background-color: var(--schedule-line);
+    width: 93%;
+    height: 1px;
+    margin-top: 100px;
+    margin-left: auto;
+}
+ 
+.line:last-of-type {
+    visibility: hidden;
+}
+
+@media screen and (max-width: 1300px) {
+    .schedule {
+        width: 500px;
+    }
+    .line {
+        width: 89%;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .schedule {
+        width: 350px;
+    }
+    .line {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .schedule {
+        margin: 15px 0;
+        margin-right: 0px;
+    }
+    .days {
+        cursor: default;
+    }
+    .selectedWrapper {
+        height: 35px;
+        margin-top: -9px;
+    }
+}

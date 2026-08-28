@@ -1,0 +1,60 @@
+.weekToggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    gap: 19%;
+    background-color: var(--bg-secondary);
+    color: var(--btn-color);
+    width: 250px;
+    height: 50px;
+    margin-left: 35px;
+    margin-top: 50px;
+    border-radius: 1rem;
+    border: 2px solid var(--gray-3);
+    transition: all 0.20s ease-in-out;
+}
+ 
+.weekToggle p {
+    z-index: 1;
+    cursor: pointer;
+}
+ 
+.selectedWeek {
+    color: var(--btn-font-color);
+    cursor: default !important;
+    transition: all 0.20s ease-in-out;
+}
+ 
+.weekTogWrap {
+    position: absolute;
+    background-color: var(--btn-color);
+    height: 30px;
+    border-radius: 0.6rem;
+    z-index: 0;
+    transition: all 0.20s ease-in-out;
+}
+
+@media screen and (max-width: 1300px) {
+    .weekToggle {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .weekToggle {
+        width: 200px;
+        height: 35px;
+        margin-left: 0px;
+        margin-top: 0px;
+        border: none;
+        background-color: var(--bg-primary);
+    }
+    .weekTogWrap {
+        height: 25px;
+        border-radius: 0.5rem;
+    }
+}
+ 
